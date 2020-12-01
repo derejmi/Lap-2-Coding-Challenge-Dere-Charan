@@ -2,6 +2,15 @@ import React from "react";
 import "./repo.css";
 
 class Repo extends React.Component {
+  state = {
+    important: false,
+  };
+
+  changeImportance = () => {
+    debugger;
+    this.setState((prevState) => ({ important: !prevState.important }));
+  };
+
   render() {
     const {
       name,
@@ -12,6 +21,9 @@ class Repo extends React.Component {
       updated_at,
       owner: { avatar_url },
     } = this.props.details;
+
+    const isImportant = this.state.important;
+    const buttonText = isImportant ? "Unmark ❌ " : "Mark as Important 📌";
 
     return (
       <li className="repo-list">
@@ -25,6 +37,14 @@ class Repo extends React.Component {
           <p>Open Issues: {open_issues_count}</p>
           <p>Stargazers: {stargazers_count}</p>
           <p>Date: {updated_at}</p>
+          <button
+            onClick={this.changeImportance}
+            style={{
+              backgroundColor: this.state.important ? "green" : "white",
+            }}
+          >
+            {buttonText}
+          </button>
         </div>
       </li>
     );

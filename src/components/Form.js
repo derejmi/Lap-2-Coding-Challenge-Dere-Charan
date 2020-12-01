@@ -18,7 +18,6 @@ class Form extends React.Component {
 
   fetchGithubData = (username) => {
     const url = `https://api.github.com/users/${username}/repos`;
-    debugger;
     fetch(url)
       .then((r) => r.json())
       .then((data) =>
