@@ -1,0 +1,16 @@
+.repo-list {
+  display: flex;
+  width: 75%;
+  height: 10%;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.repo-list .img {
+  width: 200px;
+  height: auto;
+}
+
+.repo-list-details {
+  margin-left: 20px;
+}

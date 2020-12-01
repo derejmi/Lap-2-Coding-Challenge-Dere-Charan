@@ -1,4 +1,6 @@
 import React from "react";
+import Repo from "./Repo";
+import Greeting from "./Greeting";
 
 class Form extends React.Component {
   state = { nameInput: "" };
@@ -19,6 +21,11 @@ class Form extends React.Component {
     debugger;
     fetch(url)
       .then((r) => r.json())
+      .then((data) =>
+        data.sort((a, b) => {
+          return new Date(b.updated_at) - new Date(a.updated_at);
+        })
+      )
       .then((data) => this.setState({ userData: data }))
       .catch((err) => {
         console.warn(`Sorry but...${err}`);
@@ -38,7 +45,7 @@ class Form extends React.Component {
           />
           <input type="submit" value="Find Repos!" />
         </form>
-
+        {this.state.userData && <Greeting details={this.state.userData[0]} />}
         {this.state.userData &&
           this.state.userData.map((repo, idx) => {
             return (
