@@ -1,6 +1,5 @@
 import React from "react";
-// import Form from "./Form";
-// import Nav from "./Nav";
+import Form from "./components/Form";
 
 class App extends React.Component {
   state = {};
@@ -8,7 +7,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Nav />
         <Form />
       </div>
     );

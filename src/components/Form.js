@@ -1,4 +1,4 @@
-import React from "React";
+import React from "react";
 
 class Form extends React.Component {
   state = { nameInput: "" };
@@ -16,9 +16,9 @@ class Form extends React.Component {
 
   fetchGithubData = (username) => {
     const url = `https://api.github.com/users/${username}/repos`;
-
+    debugger;
     fetch(url)
-      .then((r) => r.json)
+      .then((r) => r.json())
       .then((data) => this.setState({ userData: data }))
       .catch((err) => {
         console.warn(`Sorry but...${err}`);
@@ -27,17 +27,29 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handSubmit}>
-        <input
-          type="text"
-          name="nameInput"
-          placeholder="Enter a username..."
-          value={this.state.nameInput}
-          onChange={this.handleInput}
-        />
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            name="nameInput"
+            placeholder="Enter your username..."
+            onChange={this.updateInput}
+            value={this.state.nameInput}
+          />
+          <input type="submit" value="Find Repos!" />
+        </form>
 
-        <input type="submit" value="Find Repos!" />
-      </form>
+        {this.state.userData &&
+          this.state.userData.map((repo, idx) => {
+            return (
+              <Repo
+                key={`Repo ${idx + 1}`}
+                index={`Repo ${idx + 1}`}
+                details={this.state.userData[idx]}
+              />
+            );
+          })}
+      </div>
     );
   }
 }
