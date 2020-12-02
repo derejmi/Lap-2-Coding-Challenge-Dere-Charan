@@ -34,7 +34,7 @@ class Repo extends React.Component {
           <p>Forks: {forks}</p>
           <p>Open Issues: {open_issues_count}</p>
           <p>Stargazers: {stargazers_count}</p>
-          <p>Date: {updated_at.split("T")[0]}</p>
+          <p>Last updated: {updated_at.split("T")[0]}</p>
           <button
             onClick={this.changeImportance}
             style={{
