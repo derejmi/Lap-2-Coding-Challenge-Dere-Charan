@@ -1,6 +1,7 @@
 import React from "react";
 import Repo from "./Repo";
 import Greeting from "./Greeting";
+import "./form.css";
 
 class Form extends React.Component {
   state = { nameInput: "" };

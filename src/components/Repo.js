@@ -1,5 +1,4 @@
 import React from "react";
-import "./repo.css";
 
 class Repo extends React.Component {
   state = {
@@ -7,7 +6,6 @@ class Repo extends React.Component {
   };
 
   changeImportance = () => {
-    debugger;
     this.setState((prevState) => ({ important: !prevState.important }));
   };
 
@@ -36,7 +34,7 @@ class Repo extends React.Component {
           <p>Forks: {forks}</p>
           <p>Open Issues: {open_issues_count}</p>
           <p>Stargazers: {stargazers_count}</p>
-          <p>Date: {updated_at}</p>
+          <p>Date: {updated_at.split("T")[0]}</p>
           <button
             onClick={this.changeImportance}
             style={{
