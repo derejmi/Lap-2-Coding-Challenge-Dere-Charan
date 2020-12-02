@@ -1,0 +1,26 @@
+.welcome {
+text-align: center;
+ 
+
+}
+
+.jumbotron{
+    background-color: salmon;
+}
+h2 {
+    
+
+
+
+}
+p {
+    font-family: monaco;
+    font-style: italic;
+}
+body {
+    background-image: linear-gradient(to right, pink , hotpink);
+    text-align: center;
+
+
+
+}
