@@ -1,9 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+:root {
+  --primary-font: "Quicksand", sans-serif;
+}
+
 .repo-list {
   display: flex;
   width: 75%;
   height: 10%;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: 20px;
+  font-family: var(--primary-font);
 }
 
 .repo-list .img {

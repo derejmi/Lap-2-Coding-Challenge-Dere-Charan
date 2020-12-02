@@ -40,7 +40,8 @@ class Repo extends React.Component {
           <button
             onClick={this.changeImportance}
             style={{
-              backgroundColor: this.state.important ? "green" : "white",
+              backgroundColor: this.state.important ? "rebeccapurple" : "white",
+              color: this.state.important ? "white" : "black",
             }}
           >
             {buttonText}
