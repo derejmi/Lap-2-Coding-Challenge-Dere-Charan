@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -11,8 +12,8 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText
-} from 'reactstrap';
+  NavbarText,
+} from "reactstrap";
 
 const Navbarr = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,35 +27,33 @@ const Navbarr = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/components/">go down</NavLink>
+            <NavItem style={{ marginTop: 7.5, marginRight: 15 }}>
+              <Link to="/">Home</Link>
             </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/">GitHub</NavLink>
+            <NavItem style={{ marginTop: 7.5, marginRight: 15 }}>
+              <Link to="/about">About</Link>
             </NavItem>
+            <NavItem style={{ marginTop: 7.5, marginRight: 15 }}>
+              <Link to="/repos">Repos</Link>
+            </NavItem>
+
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 More
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>
-                  github repo
-                </DropdownItem>
-                <DropdownItem>
-                  github
-                </DropdownItem>
+                <DropdownItem>github repo</DropdownItem>
+                <DropdownItem>github</DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem>
-                  Reset
-                </DropdownItem>
+                <DropdownItem>Reset</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Apple</NavbarText>
+          <NavbarText>Github Repo App</NavbarText>
         </Collapse>
       </Navbar>
     </div>
   );
-}
+};
 
 export default Navbarr;
