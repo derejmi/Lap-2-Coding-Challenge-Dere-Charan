@@ -1,6 +1,6 @@
 # Github Repo App
 Github repository application - Done as part of a 1-day coding challenge.
-
+![](Github_Repo.gif)
 ## Installation
 
 - Clone or download the repo
