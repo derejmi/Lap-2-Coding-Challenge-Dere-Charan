@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+:root {
+  --primary-font: "Quicksand", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: var(--primary-font);
+  font-size: 2.5em;
+  font-weight: 700;
+  color: rebeccapurple;
+  margin-bottom: 40px;
+}

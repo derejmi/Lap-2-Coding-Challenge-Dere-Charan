@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+:root {
+  --primary-font: "Quicksand", sans-serif;
+}
+
+form {
+  margin: 40px 40px 30px 30px;
+  font-family: var(--primary-font);
+}
+.repo-list {
+  display: flex;
+  width: 75%;
+  height: 10%;
+  margin-top: 20px;
+  margin-left: 40px;
+  font-family: var(--primary-font);
+}
+
+.repo-list .img {
+  width: 200px;
+  height: auto;
+}
+
+.repo-list-details {
+  margin-left: 20px;
+}
+
+button:hover {
+  font-weight: 700;
+  border: 2px solid black;
+  cursor: pointer;
+}
